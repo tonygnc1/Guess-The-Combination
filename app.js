@@ -8,7 +8,7 @@ button.addEventListener('click', function() {
     gamePlay = true;
     score = 0;
     gameArea.innerHTML = '';
-    maker();
+    maker(6);
     message.innerHTML = 'Guess the Combination';
     button.innerHTML = 'Check Combo';
   } else {
@@ -43,8 +43,8 @@ function gameOver() {
   button.innerHTML = 'Restart Game';
 }
 
-function maker() {
-  for (let x = 0; x < 4; x++) {
+function maker(num) {
+  for (let x = 0; x < num; x++) {
     let el = document.createElement('input');
     el.setAttribute('type', 'number');
     el.max = 9;
